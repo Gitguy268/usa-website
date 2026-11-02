@@ -1,0 +1,789 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>The United States of America — An Editorial Guide</title>
+<meta name="description" content="A clean, authoritative editorial guide to the United States: history, geography, government, states, culture, economy, landmarks and key facts." />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700;800;900&family=Inter:wght@400;500;600;700&family=Source+Serif+4:opsz,wght@8..60,500;8..60,600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --navy:#0A1931;
+  --navy-2:#132845;
+  --navy-3:#1B3560;
+  --red:#B31942;
+  --red-dark:#8E1233;
+  --red-soft:#F9E8EC;
+  --white:#FFFFFF;
+  --paper:#F7F7F5;
+  --gray:#EEF0F3;
+  --gray-2:#E2E6EB;
+  --ink:#1A2332;
+  --muted:#5B6577;
+  --line:#DCE1E7;
+  --gold:#C9A86A;
+  --radius:14px;
+  --shadow:0 12px 32px rgba(10,25,49,.10);
+  --shadow-sm:0 4px 16px rgba(10,25,49,.08);
+  --max:1200px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;
+  font-family:'Inter',system-ui,-apple-system,Segoe UI,Roboto,sans-serif;
+  color:var(--ink);
+  background:var(--white);
+  line-height:1.65;
+  -webkit-font-smoothing:antialiased;
+}
+h1,h2,h3{font-family:'Archivo',Inter,sans-serif; line-height:1.08; letter-spacing:-.02em; margin:0}
+.serif{font-family:'Source Serif 4',Georgia,serif}
+a{color:inherit}
+img{max-width:100%}
+.container{max-width:var(--max); margin:0 auto; padding:0 24px}
+.kicker{
+  display:inline-flex; align-items:center; gap:10px;
+  font-size:12px; font-weight:700; letter-spacing:.14em; text-transform:uppercase;
+  color:var(--red);
+}
+.kicker::before{content:""; width:28px; height:3px; background:var(--red); display:inline-block; border-radius:2px}
+.section-title{font-size:clamp(28px,3.6vw,44px); font-weight:800; color:var(--navy); margin:12px 0 12px}
+.section-sub{color:var(--muted); font-size:17px; max-width:720px; margin:0}
+section.block{padding:84px 0}
+section.block.alt{background:var(--paper); position:relative; overflow:hidden}
+.eyebrow-row{display:flex; justify-content:space-between; align-items:end; gap:24px; margin-bottom:36px; flex-wrap:wrap}
+
+/* flag stripe */
+.flag-stripe{height:6px; display:flex}
+.flag-stripe span:nth-child(1){flex:1; background:var(--red)}
+.flag-stripe span:nth-child(2){flex:1; background:#fff}
+.flag-stripe span:nth-child(3){flex:1; background:var(--navy)}
+.flag-stripe span:nth-child(4){flex:1; background:var(--red)}
+.flag-stripe span:nth-child(5){flex:1; background:#fff}
+.flag-stripe span:nth-child(6){flex:1; background:var(--navy)}
+
+/* header */
+.topbar{background:var(--navy); color:#D9E2F0; font-size:13px}
+.topbar-inner{display:flex; justify-content:space-between; align-items:center; padding:8px 24px; max-width:var(--max); margin:0 auto}
+.topbar strong{color:#fff; font-weight:700; letter-spacing:.08em; text-transform:uppercase; font-size:12px}
+header.nav{
+  position:sticky; top:0; z-index:50;
+  background:rgba(255,255,255,.92); backdrop-filter:blur(14px);
+  border-bottom:1px solid var(--line);
+}
+.nav-inner{max-width:var(--max); margin:0 auto; padding:0 24px; display:flex; align-items:center; justify-content:space-between; height:68px}
+.brand{display:flex; align-items:center; gap:12px; text-decoration:none}
+.brand-mark{
+  width:40px; height:40px; border-radius:10px; background:var(--navy);
+  display:grid; place-items:center; color:#fff; font-weight:900; position:relative; overflow:hidden;
+  flex-shrink:0;
+}
+.brand-mark::after{
+  content:""; position:absolute; bottom:0; left:0; right:0; height:12px;
+  background:repeating-linear-gradient(to bottom, var(--red) 0 2px, #fff 2px 4px);
+  opacity:.95;
+}
+.brand-text{line-height:1.1}
+.brand-text b{display:block; font-family:Archivo; font-weight:800; letter-spacing:-.02em; color:var(--navy); font-size:17px}
+.brand-text small{color:var(--muted); font-size:12px; letter-spacing:.12em; text-transform:uppercase; font-weight:600}
+.nav-links{display:flex; gap:4px; align-items:center}
+.nav-links a{
+  text-decoration:none; font-size:14px; font-weight:600; color:#2B364B;
+  padding:9px 12px; border-radius:8px;
+}
+.nav-links a:hover, .nav-links a.active{background:var(--gray); color:var(--navy)}
+.btn{
+  display:inline-flex; align-items:center; gap:8px;
+  background:var(--red); color:#fff; border:0; border-radius:999px;
+  padding:11px 20px; font-weight:700; font-size:14px; text-decoration:none; cursor:pointer;
+}
+.btn:hover{background:var(--red-dark)}
+.btn.ghost{background:transparent; color:var(--navy); border:1.5px solid var(--line)}
+.btn.ghost:hover{border-color:var(--navy)}
+.hamburger{display:none; border:1px solid var(--line); background:#fff; border-radius:10px; width:44px; height:44px; font-size:20px; cursor:pointer}
+
+/* hero */
+.hero{
+  background:
+    radial-gradient(900px 420px at 85% 15%, rgba(201,168,106,.22), transparent 60%),
+    radial-gradient(700px 500px at 10% 90%, rgba(179,25,66,.18), transparent 60%),
+    linear-gradient(180deg, #0A1931 0%, #10264E 55%, #162E5B 100%);
+  color:#fff; position:relative; overflow:hidden;
+}
+.hero::before{
+  content:"";
+  position:absolute; inset:0;
+  background-image: radial-gradient(rgba(255,255,255,.18) 1.4px, transparent 1.4px);
+  background-size:26px 26px;
+  mask-image: linear-gradient(to bottom, black 0%, transparent 75%);
+  opacity:.35;
+  pointer-events:none;
+}
+.hero::after{
+  content:"USA";
+  position:absolute; right:-10px; bottom:-46px;
+  font-family:Archivo; font-weight:900; font-size:clamp(140px,22vw,300px);
+  line-height:1; letter-spacing:-.06em; color:transparent;
+  -webkit-text-stroke:1px rgba(255,255,255,.14);
+  pointer-events:none;
+}
+.hero-inner{max-width:var(--max); margin:0 auto; padding:72px 24px 0; display:grid; grid-template-columns:1.15fr .85fr; gap:40px; position:relative; z-index:1}
+.hero-badge{
+  display:inline-flex; align-items:center; gap:10px;
+  background:rgba(255,255,255,.10); border:1px solid rgba(255,255,255,.18);
+  padding:8px 12px 8px 8px; border-radius:999px; font-size:13px; font-weight:600; color:#E8EEF7;
+}
+.hero-badge i{
+  font-style:normal; background:#fff; color:var(--navy); font-weight:800; font-size:12px;
+  padding:4px 9px; border-radius:999px; letter-spacing:.06em;
+}
+.hero h1{font-size:clamp(40px,5.6vw,68px); font-weight:900; margin:18px 0 16px; letter-spacing:-.04em}
+.hero h1 em{font-style:normal; color:#FF8AA0}
+.hero p.lead{font-size:18px; line-height:1.6; color:#CBD6E9; max-width:560px; margin:0 0 26px}
+.hero-cta{display:flex; gap:12px; flex-wrap:wrap; margin-bottom:28px}
+.hero-cta .btn.ghost{color:#fff; border-color:rgba(255,255,255,.28); background:rgba(255,255,255,.08)}
+.hero-meta{display:flex; gap:18px; flex-wrap:wrap; color:#AEBDD6; font-size:13px; font-weight:600; padding-bottom:8px}
+.hero-meta span{display:inline-flex; align-items:center; gap:8px}
+.dot{width:7px; height:7px; border-radius:50%; background:#5EE0A0; display:inline-block; box-shadow:0 0 0 5px rgba(94,224,160,.18)}
+.hero-card{
+  background:#fff; color:var(--ink); border-radius:18px; padding:22px;
+  box-shadow:0 24px 60px rgba(0,0,0,.28); align-self:start;
+}
+.hero-card-top{display:flex; justify-content:space-between; align-items:center; margin-bottom:14px}
+.hero-card-top b{font-family:Archivo; font-size:14px; letter-spacing:.1em; text-transform:uppercase; color:var(--navy)}
+.live{font-size:12px; font-weight:700; background:#E7F7EE; color:#12794A; padding:6px 10px; border-radius:999px}
+.fact-grid{display:grid; grid-template-columns:1fr 1fr; gap:12px}
+.fact{background:var(--paper); border:1px solid var(--line); border-radius:12px; padding:14px}
+.fact small{display:block; font-size:11px; font-weight:700; letter-spacing:.1em; text-transform:uppercase; color:var(--muted); margin-bottom:4px}
+.fact strong{font-size:15px; color:var(--navy)}
+.fact p{margin:4px 0 0; font-size:13px; color:var(--muted)}
+.hero-stripes{display:flex; gap:6px; margin-top:16px}
+.hero-stripes span{height:6px; border-radius:999px}
+.hero-stripes span:nth-child(1){flex:3; background:var(--red)}
+.hero-stripes span:nth-child(2){flex:2; background:var(--gray-2)}
+.hero-stripes span:nth-child(3){flex:4; background:var(--navy-3)}
+.hero-stats{
+  max-width:var(--max); margin:36px auto 0; padding:0 24px 36px;
+  display:grid; grid-template-columns:repeat(4,1fr); gap:14px; position:relative; z-index:1;
+}
+.stat{
+  background:rgba(255,255,255,.08); border:1px solid rgba(255,255,255,.14);
+  border-radius:14px; padding:18px; backdrop-filter:blur(6px);
+}
+.stat strong{display:block; font-family:Archivo; font-size:30px; font-weight:800}
+.stat span{color:#B9C6DD; font-size:13px; font-weight:600; letter-spacing:.06em; text-transform:uppercase}
+.stat p{margin:6px 0 0; font-size:13px; color:#9DAED0}
+
+/* layout helpers */
+.grid-3{display:grid; grid-template-columns:repeat(3,1fr); gap:18px}
+.grid-2{display:grid; grid-template-columns:1fr 1fr; gap:18px}
+.grid-4{display:grid; grid-template-columns:repeat(4,1fr); gap:16px}
+.card{
+  background:#fff; border:1px solid var(--line); border-radius:var(--radius);
+  padding:24px; box-shadow:var(--shadow-sm);
+}
+.card h3{font-size:19px; color:var(--navy); margin:12px 0 8px}
+.card p{margin:0; color:#3D4A61; font-size:15px}
+.icon{
+  width:44px; height:44px; border-radius:12px; display:grid; place-items:center;
+  background:var(--navy); color:#fff; font-weight:800;
+}
+.icon.red{background:var(--red)}
+.icon.light{background:var(--gray); color:var(--navy); border:1px solid var(--line)}
+.tag{font-size:12px; font-weight:700; letter-spacing:.08em; text-transform:uppercase; color:var(--red)}
+.divider{height:1px; background:var(--line); margin:22px 0}
+
+/* timeline */
+.timeline{position:relative; margin-top:10px; padding-left:28px}
+.timeline::before{content:""; position:absolute; left:8px; top:6px; bottom:6px; width:2px; background:linear-gradient(var(--red), var(--navy))}
+.t-item{position:relative; background:#fff; border:1px solid var(--line); border-radius:14px; padding:20px 20px 18px; margin-bottom:14px; box-shadow:var(--shadow-sm)}
+.t-item::before{
+  content:""; position:absolute; left:-26px; top:22px; width:12px; height:12px; border-radius:50%;
+  background:var(--navy); border:3px solid #fff; box-shadow:0 0 0 2px var(--navy);
+}
+.t-item.red-dot::before{background:var(--red); box-shadow:0 0 0 2px var(--red)}
+.t-item .year{font-family:Archivo; font-weight:800; color:var(--red); font-size:13px; letter-spacing:.1em}
+.t-item h3{margin:4px 0 6px; font-size:18px; color:var(--navy)}
+.t-item p{margin:0; color:#44516A; font-size:15px}
+.two-col{display:grid; grid-template-columns:1.05fr .95fr; gap:28px; align-items:start}
+
+/* map texture panel */
+.map-panel{
+  background:
+    radial-gradient(circle at 1px 1px, #CBD5E3 1px, transparent 1px) 0 0/18px 18px,
+    linear-gradient(180deg, #0F2547, #132C54);
+  color:#E6EDF7; border-radius:18px; padding:28px; position:relative; overflow:hidden;
+  border:1px solid #1E3A67;
+}
+.map-panel h3{font-size:24px; margin:0 0 8px}
+.map-panel p{color:#B9C7DE; margin:0 0 18px}
+.map-legend{display:grid; grid-template-columns:1fr 1fr; gap:12px}
+.map-legend div{background:rgba(255,255,255,.08); border:1px solid rgba(255,255,255,.14); border-radius:12px; padding:14px}
+.map-legend strong{display:block; font-size:15px}
+.map-legend span{font-size:13px; color:#A8B9D4}
+.usa-outline{
+  position:absolute; right:-18px; top:-10px; width:300px; opacity:.18; pointer-events:none;
+}
+
+/* branches */
+.branch{position:relative; overflow:hidden}
+.branch::after{content:""; position:absolute; top:0; left:0; right:0; height:4px; background:var(--navy)}
+.branch:nth-child(2)::after{background:var(--red)}
+.branch:nth-child(3)::after{background:var(--gold)}
+.branch ul{margin:12px 0 0; padding-left:18px; color:#3D4A61; font-size:14px}
+.branch li{margin:5px 0}
+
+/* cities */
+.toolbar{display:flex; gap:10px; flex-wrap:wrap; align-items:center; margin-bottom:18px}
+.search{
+  flex:1; min-width:220px; display:flex; align-items:center; gap:10px;
+  background:#fff; border:1px solid var(--line); border-radius:999px; padding:11px 16px;
+}
+.search input{border:0; outline:0; width:100%; font-size:14px; font-family:inherit}
+.pill{border:1px solid var(--line); background:#fff; border-radius:999px; padding:9px 14px; font-size:13px; font-weight:700; cursor:pointer; color:#33405A}
+.pill.active{background:var(--navy); color:#fff; border-color:var(--navy)}
+.city-grid{display:grid; grid-template-columns:repeat(3,1fr); gap:16px}
+.city{
+  border:1px solid var(--line); border-radius:14px; overflow:hidden; background:#fff; box-shadow:var(--shadow-sm);
+  display:flex; flex-direction:column;
+}
+.city-visual{height:130px; position:relative; display:flex; align-items:end; padding:14px; color:#fff; font-family:Archivo; font-weight:800; font-size:22px}
+.city-visual small{position:absolute; top:12px; left:12px; font-size:11px; letter-spacing:.1em; background:rgba(0,0,0,.36); padding:5px 9px; border-radius:999px; font-weight:700}
+.city-body{padding:16px 16px 18px}
+.city-body p{margin:0; font-size:14px; color:#44516A}
+.city-meta{display:flex; gap:14px; margin-top:12px; font-size:13px; font-weight:600; color:var(--navy)}
+.states-box{margin-top:18px; background:#fff; border:1px solid var(--line); border-radius:14px; padding:20px}
+.states-box h3{color:var(--navy); font-size:17px; margin:0 0 10px}
+.state-pills{display:flex; flex-wrap:wrap; gap:8px}
+.state-pills span{font-size:13px; font-weight:600; background:var(--paper); border:1px solid var(--line); padding:6px 10px; border-radius:999px; color:#2F3B52}
+.state-pills span b{color:var(--red)}
+
+/* culture */
+.culture-grid{display:grid; grid-template-columns:repeat(4,1fr); gap:16px}
+.culture-card{background:#fff; border:1px solid var(--line); border-radius:14px; padding:20px}
+.culture-card h3{font-size:16px; margin:10px 0 6px}
+.culture-card p{font-size:14px; color:#44516A; margin:0}
+.holiday-strip{display:grid; grid-template-columns:repeat(4,1fr); gap:12px; margin-top:16px}
+.holiday{background:var(--navy); color:#fff; border-radius:12px; padding:16px}
+.holiday strong{display:block; font-size:14px}
+.holiday span{font-size:13px; color:#B9C6DD}
+
+/* economy */
+.econ{display:grid; grid-template-columns:1.1fr .9fr; gap:18px}
+.bar{margin:14px 0}
+.bar-top{display:flex; justify-content:space-between; font-size:13px; font-weight:700; color:var(--navy); margin-bottom:6px}
+.bar-track{height:10px; background:var(--gray); border-radius:999px; overflow:hidden}
+.bar-fill{height:100%; background:linear-gradient(90deg, var(--navy), var(--navy-3)); border-radius:999px; width:0; transition:width 1.2s ease}
+.bar-fill.red{background:linear-gradient(90deg, var(--red), #E35A7A)}
+.kpi-grid{display:grid; grid-template-columns:1fr 1fr; gap:12px; margin-top:16px}
+.kpi{background:#fff; border:1px solid var(--line); border-radius:12px; padding:16px; text-align:left}
+.kpi strong{font-family:Archivo; font-size:26px; color:var(--navy); display:block}
+.kpi span{font-size:12px; font-weight:700; letter-spacing:.08em; text-transform:uppercase; color:var(--muted)}
+
+/* landmarks */
+.land-grid{display:grid; grid-template-columns:repeat(3,1fr); gap:16px}
+.land{border-radius:16px; overflow:hidden; background:#fff; border:1px solid var(--line); box-shadow:var(--shadow-sm)}
+.land-img{height:180px; position:relative; padding:16px; display:flex; align-items:flex-start; justify-content:space-between; color:#fff}
+.land-img h3{font-size:20px; text-shadow:0 2px 12px rgba(0,0,0,.35)}
+.land-img .badge{background:rgba(255,255,255,.92); color:var(--navy); font-size:12px; font-weight:800; padding:6px 10px; border-radius:999px}
+.land-body{padding:18px}
+.land-body p{margin:0; font-size:14px; color:#44516A}
+.land-body .meta{margin-top:12px; display:flex; justify-content:space-between; font-size:13px; font-weight:700; color:var(--navy)}
+
+/* facts */
+.facts-grid{display:grid; grid-template-columns:repeat(4,1fr); gap:14px}
+.fact-card{background:#fff; border:1px solid var(--line); border-radius:14px; padding:18px}
+.fact-card small{font-size:11px; font-weight:800; letter-spacing:.12em; text-transform:uppercase; color:var(--red)}
+.fact-card strong{display:block; font-size:17px; color:var(--navy); margin:6px 0 4px}
+.fact-card p{margin:0; font-size:14px; color:#44516A}
+.table-wrap{background:#fff; border:1px solid var(--line); border-radius:14px; overflow:hidden; margin-top:16px}
+table{width:100%; border-collapse:collapse; font-size:14px}
+th,td{text-align:left; padding:13px 16px; border-bottom:1px solid var(--line)}
+th{background:var(--navy); color:#fff; font-size:12px; letter-spacing:.08em; text-transform:uppercase}
+tr:last-child td{border-bottom:0}
+tr:nth-child(even) td{background:#F9FAFB}
+
+/* quote */
+.quote{
+  background:linear-gradient(135deg, var(--navy) 0%, var(--red-dark) 130%);
+  color:#fff; border-radius:18px; padding:32px; display:grid; grid-template-columns:1fr auto; gap:20px; align-items:center;
+  position:relative; overflow:hidden;
+}
+.quote::before{content:"“"; position:absolute; left:18px; top:0; font-size:120px; opacity:.12; font-family:Georgia,serif}
+.quote p{font-family:'Source Serif 4',serif; font-size:22px; line-height:1.5; margin:0; position:relative}
+.quote cite{display:block; margin-top:10px; font-family:Inter; font-style:normal; font-size:13px; letter-spacing:.08em; text-transform:uppercase; color:#D6BFC6}
+
+/* footer */
+footer{background:#070F21; color:#9AA8C3; padding:56px 0 28px; margin-top:0}
+.foot-grid{display:grid; grid-template-columns:1.2fr 1fr 1fr 1fr; gap:28px; max-width:var(--max); margin:0 auto; padding:0 24px}
+.foot-grid h4{color:#fff; font-size:13px; letter-spacing:.1em; text-transform:uppercase; margin:0 0 12px}
+.foot-grid a{display:block; color:#9AA8C3; text-decoration:none; font-size:14px; margin:7px 0}
+.foot-grid a:hover{color:#fff}
+.foot-bottom{max-width:var(--max); margin:28px auto 0; padding:18px 24px 0; border-top:1px solid rgba(255,255,255,.12); display:flex; justify-content:space-between; gap:12px; flex-wrap:wrap; font-size:13px}
+
+/* reveal */
+.reveal{opacity:0; transform:translateY(18px); transition:opacity .7s ease, transform .7s ease}
+.reveal.visible{opacity:1; transform:none}
+
+/* back to top */
+#toTop{
+  position:fixed; right:20px; bottom:20px; width:48px; height:48px; border-radius:50%;
+  background:var(--navy); color:#fff; border:0; font-size:20px; cursor:pointer; display:none; box-shadow:var(--shadow);
+}
+
+/* responsive */
+@media(max-width:1000px){
+  .hero-inner{grid-template-columns:1fr}
+  .hero-stats{grid-template-columns:1fr 1fr}
+  .grid-3,.city-grid,.land-grid{grid-template-columns:1fr 1fr}
+  .grid-4,.facts-grid,.culture-grid,.holiday-strip{grid-template-columns:1fr 1fr}
+  .two-col,.econ{grid-template-columns:1fr}
+  .nav-links{display:none; position:absolute; top:68px; left:0; right:0; background:#fff; flex-direction:column; align-items:stretch; padding:12px 16px 16px; border-bottom:1px solid var(--line)}
+  .nav-links.open{display:flex}
+  .hamburger{display:block}
+  .foot-grid{grid-template-columns:1fr 1fr}
+  .quote{grid-template-columns:1fr}
+}
+@media(max-width:600px){
+  section.block{padding:56px 0}
+  .grid-3,.grid-2,.city-grid,.land-grid,.grid-4,.facts-grid,.culture-grid,.holiday-strip,.kpi-grid{grid-template-columns:1fr}
+  .hero-stats{grid-template-columns:1fr}
+  .fact-grid{grid-template-columns:1fr}
+  .topbar-inner{font-size:12px}
+}
+</style>
+</head>
+<body>
+
+<div class="flag-stripe" aria-hidden="true"><span></span><span></span><span></span><span></span><span></span><span></span></div>
+<div class="topbar">
+  <div class="topbar-inner">
+    <div><strong>★ The Union</strong> &nbsp;·&nbsp; An independent editorial guide</div>
+    <div id="dateLine">Washington, D.C. — EST</div>
+  </div>
+</div>
+
+<header class="nav">
+  <div class="nav-inner">
+    <a class="brand" href="#top">
+      <div class="brand-mark">US</div>
+      <div class="brand-text"><b>United States</b><small>History · Civic Guide</small></div>
+    </a>
+    <nav class="nav-links" id="navLinks">
+      <a href="#history">History</a>
+      <a href="#geography">Geography</a>
+      <a href="#government">Government</a>
+      <a href="#states">States & Cities</a>
+      <a href="#culture">Culture</a>
+      <a href="#economy">Economy</a>
+      <a href="#landmarks">Landmarks</a>
+      <a href="#facts" class="btn" style="color:#fff; margin-left:6px">Key Facts</a>
+    </nav>
+    <button class="hamburger" id="menuBtn" aria-label="Menu">☰</button>
+  </div>
+</header>
+
+<!-- HERO -->
+<div class="hero" id="top">
+  <div class="hero-inner">
+    <div>
+      <div class="hero-badge"><i>1776 — 2026</i> 250 years of the American experiment</div>
+      <h1>The United States <em>of America</em>, explained with clarity.</h1>
+      <p class="lead">From thirteen colonies to fifty states — a spacious, magazine-style guide to American history, land, government, cities, culture, economy and the places that define it.</p>
+      <div class="hero-cta">
+        <a href="#history" class="btn">Start with History →</a>
+        <a href="#facts" class="btn ghost">Explore Key Facts</a>
+      </div>
+      <div class="hero-meta">
+        <span><span class="dot"></span> 50 states + D.C. & territories</span>
+        <span>◆ 9.83M km² · 3rd largest country</span>
+        <span>◆ 340M+ residents</span>
+      </div>
+    </div>
+    <aside class="hero-card" aria-label="At a glance">
+      <div class="hero-card-top"><b>At a glance</b><span class="live">● Updated 2026</span></div>
+      <div class="fact-grid">
+        <div class="fact"><small>Capital</small><strong>Washington, D.C.</strong><p>Founded 1790 · Federal district</p></div>
+        <div class="fact"><small>Population</small><strong>~340 million</strong><p>3rd most populous nation</p></div>
+        <div class="fact"><small>Independence</small><strong>July 4, 1776</strong><p>Declaration adopted</p></div>
+        <div class="fact"><small>Motto</small><strong>“In God We Trust”</strong><p>“E Pluribus Unum” — traditional</p></div>
+      </div>
+      <div class="hero-stripes" aria-hidden="true"><span></span><span></span><span></span></div>
+      <p style="font-size:13px; color:#5B6577; margin:12px 0 0">Old Glory red <b style="color:#B31942">#B31942</b> · Deep navy <b style="color:#0A1931">#0A1931</b> · Thirteen stripes for thirteen colonies.</p>
+    </aside>
+  </div>
+  <div class="hero-stats">
+    <div class="stat"><span>States</span><strong data-count="50">0</strong><p>From Delaware (1787) to Hawaii (1959)</p></div>
+    <div class="stat"><span>Population (M)</span><strong data-count="340" data-suffix="M+">0</strong><p>Diverse, urban, youthful median age ~38</p></div>
+    <div class="stat"><span>GDP (Trillion USD)</span><strong data-count="29" data-prefix="$" data-suffix="T">0</strong><p>Largest economy in the world</p></div>
+    <div class="stat"><span>National Parks</span><strong data-count="63">0</strong><p>Plus 430+ NPS sites nationwide</p></div>
+  </div>
+</div>
+
+<!-- HISTORY -->
+<section class="block" id="history">
+  <div class="container">
+    <div class="eyebrow-row reveal">
+      <div>
+        <span class="kicker">01 — History</span>
+        <h2 class="section-title">A brief, honest timeline of the Union</h2>
+        <p class="section-sub">Two and a half centuries of expansion, conflict, reform and reinvention — condensed into the moments that still shape American life today.</p>
+      </div>
+      <a href="#facts" class="btn ghost">Download-style fact sheet ↓</a>
+    </div>
+    <div class="two-col">
+      <div class="timeline reveal">
+        <div class="t-item red-dot"><div class="year">1776 · INDEPENDENCE</div><h3>Declaration of Independence</h3><p>Thirteen British colonies declare independence on July 4. The Revolutionary War (1775–1783) secures sovereignty with French support.</p></div>
+        <div class="t-item"><div class="year">1787–1789 · CONSTITUTION</div><h3>A new republic is designed</h3><p>Constitutional Convention in Philadelphia creates a federal system with checks and balances. Bill of Rights ratified 1791.</p></div>
+        <div class="t-item"><div class="year">1803 · EXPANSION</div><h3>Louisiana Purchase doubles the nation</h3><p>Jefferson buys 828,000 sq miles from France. Lewis & Clark expedition maps the West (1804–1806).</p></div>
+        <div class="t-item"><div class="year">1861–1865 · CIVIL WAR</div><h3>Union preserved, slavery abolished</h3><p>Civil war over slavery and union. Emancipation Proclamation (1863) and 13th Amendment (1865) end legal slavery.</p></div>
+        <div class="t-item"><div class="year">1920–1945 · WORLD POWER</div><h3>Suffrage, Depression, world wars</h3><p>19th Amendment grants women’s suffrage (1920). Great Depression → New Deal. U.S. emerges from WWII as a superpower.</p></div>
+        <div class="t-item"><div class="year">1960s · CIVIL RIGHTS</div><h3>Equality under law advances</h3><p>Civil Rights Act (1964), Voting Rights Act (1965), moon landing (1969). A decade of protest and progress.</p></div>
+        <div class="t-item red-dot"><div class="year">1991–2026 · MODERN ERA</div><h3>Innovation age & 250th birthday</h3><p>Cold War ends, internet economy booms. America marks its Semiquincentennial in 2026 — 250 years since 1776.</p></div>
+      </div>
+      <div>
+        <div class="card reveal" style="border-top:4px solid var(--red)">
+          <span class="tag">Editor’s note</span>
+          <h3 style="font-size:22px">Why 1776 still matters</h3>
+          <p class="serif" style="font-size:17px; color:#2B364B">“We hold these truths to be self-evident, that all men are created equal…” The promise was imperfect at birth — but it created a standard every generation has been asked to live up to.</p>
+          <div class="divider"></div>
+          <div class="grid-2">
+            <div><strong style="font-family:Archivo; font-size:28px; color:var(--navy)">13 → 50</strong><br><span style="font-size:13px; color:var(--muted); font-weight:600">COLONIES TO STATES</span></div>
+            <div><strong style="font-family:Archivo; font-size:28px; color:var(--navy)">27</strong><br><span style="font-size:13px; color:var(--muted); font-weight:600">CONSTITUTIONAL AMENDMENTS</span></div>
+          </div>
+        </div>
+        <div class="grid-2" style="margin-top:16px">
+          <div class="card reveal"><div class="icon">◈</div><h3>Founding documents</h3><p>Declaration, Constitution and Bill of Rights — housed at the National Archives in D.C.</p></div>
+          <div class="card reveal"><div class="icon red">✦</div><h3>Civil War & Reconstruction</h3><p>750,000+ lives lost; Reconstruction amendments reshaped citizenship and voting.</p></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- GEOGRAPHY -->
+<section class="block alt" id="geography">
+  <div class="container">
+    <div class="eyebrow-row reveal">
+      <div>
+        <span class="kicker">02 — Geography</span>
+        <h2 class="section-title">A continent-sized country</h2>
+        <p class="section-sub">Arctic tundra to tropical islands, deserts to temperate rainforest — the U.S. spans six time zones and nearly every climate on Earth.</p>
+      </div>
+    </div>
+    <div class="two-col">
+      <div class="grid-2">
+        <div class="card reveal"><div class="icon light">▲</div><h3>Mountains & Plains</h3><p>Rockies and Appalachians frame the Great Plains. Denali (6,190 m) in Alaska is North America’s highest peak.</p></div>
+        <div class="card reveal"><div class="icon light">≈</div><h3>Rivers & Lakes</h3><p>Mississippi–Missouri (5,970 km combined) drains the heartland. The Great Lakes hold ~21% of world surface fresh water.</p></div>
+        <div class="card reveal"><div class="icon light">◐</div><h3>Climate zones</h3><p>Mediterranean California, humid subtropical Southeast, arid Southwest, subarctic Alaska, tropical Hawaii & Florida.</p></div>
+        <div class="card reveal"><div class="icon light">⬢</div><h3>Coasts & extremes</h3><p>19,924 km of coastline. Hottest: Death Valley (56.7°C, 1913). Coldest: Prospect Creek, AK (−62°C, 1971).</p></div>
+      </div>
+      <div class="map-panel reveal">
+        <svg class="usa-outline" viewBox="0 0 200 120" fill="none" stroke="white" stroke-width="2"><path d="M10 60 L30 30 L70 25 L110 30 L150 20 L185 35 L175 70 L140 95 L90 100 L45 90 Z M25 105 L45 105 L40 115 L20 115 Z"/></svg>
+        <span class="kicker" style="color:#9AB4D8">Map texture · Regions</span>
+        <h3>Four Census regions, one vast land</h3>
+        <p>Alaska and Hawaii are noncontiguous — plus five major territories including Puerto Rico and Guam.</p>
+        <div class="map-legend">
+          <div><strong>Northeast</strong><span>9 states · Dense, historic, financial hub</span></div>
+          <div><strong>Midwest</strong><span>12 states · Farms, lakes, industry</span></div>
+          <div><strong>South</strong><span>16 states + D.C. · Fastest-growing</span></div>
+          <div><strong>West</strong><span>13 states · Mountains, tech, Pacific</span></div>
+        </div>
+        <div style="margin-top:16px; display:flex; gap:10px; flex-wrap:wrap">
+          <span style="font-size:12px; background:#fff; color:var(--navy); font-weight:800; padding:6px 12px; border-radius:999px">● 9.83M km² total area</span>
+          <span style="font-size:12px; border:1px solid rgba(255,255,255,.25); padding:6px 12px; border-radius:999px">6 time zones</span>
+          <span style="font-size:12px; border:1px solid rgba(255,255,255,.25); padding:6px 12px; border-radius:999px">5 territories</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- GOVERNMENT -->
+<section class="block" id="government">
+  <div class="container">
+    <div class="eyebrow-row reveal">
+      <div>
+        <span class="kicker">03 — Government & Politics</span>
+        <h2 class="section-title">A federal republic of checks and balances</h2>
+        <p class="section-sub">Power is divided between the national government and 50 states — and within Washington, across three co-equal branches.</p>
+      </div>
+    </div>
+    <div class="grid-3">
+      <div class="card branch reveal"><div class="icon">◩</div><h3>Legislative — Congress</h3><p>Makes federal law. Bicameral: 100 Senators (2 per state, 6-yr terms) + 435 Representatives (by population, 2-yr terms).</p><ul><li>Senate confirms judges & treaties</li><li>House originates revenue bills</li><li>Capitol Building, Washington D.C.</li></ul></div>
+      <div class="card branch reveal"><div class="icon red">⬣</div><h3>Executive — President</h3><p>Enforces law, commands armed forces, conducts foreign policy. Elected every 4 years via the Electoral College (538 votes; 270 to win). Max two terms.</p><ul><li>White House + 15 executive departments</li><li>Vice President presides over Senate</li><li>Issues executive orders</li></ul></div>
+      <div class="card branch reveal"><div class="icon light">⬔</div><h3>Judicial — Supreme Court</h3><p>Interprets the Constitution. Nine justices with lifetime appointments. Judicial review since <i>Marbury v. Madison</i> (1803).</p><ul><li>Federal courts + 13 circuit courts</li><li>Landmark rulings shape civil rights</li><li>Meets in the Supreme Court Building</li></ul></div>
+    </div>
+    <div class="card reveal" style="margin-top:18px; display:grid; grid-template-columns:1fr 1fr 1fr; gap:18px; background:var(--navy); color:#fff; border-color:var(--navy)">
+      <div><small style="letter-spacing:.1em; font-weight:800; color:#9AB4D8">HOW ELECTIONS WORK</small><h3 style="color:#fff; margin:6px 0">Every vote, every level</h3><p style="color:#B9C6DD">Federal, state and local elections run on fixed cycles. Most states use primaries + general election in November.</p></div>
+      <div style="background:rgba(255,255,255,.08); border-radius:12px; padding:16px; border:1px solid rgba(255,255,255,.14)"><strong>Presidential · every 4 yrs</strong><br><span style="color:#B9C6DD; font-size:14px">Next after 2024: 2028. Midterms (House + ⅓ Senate) every 2 years in between.</span></div>
+      <div style="background:rgba(255,255,255,.08); border-radius:12px; padding:16px; border:1px solid rgba(255,255,255,.14)"><strong>Two-party system + more</strong><br><span style="color:#B9C6DD; font-size:14px">Democrats & Republicans dominate, with independents, Libertarian and Green parties also on ballots.</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- STATES -->
+<section class="block alt" id="states">
+  <div class="container">
+    <div class="eyebrow-row reveal">
+      <div>
+        <span class="kicker">04 — States & Major Cities</span>
+        <h2 class="section-title">50 states, countless downtowns</h2>
+        <p class="section-sub">Search the major metros — each with its own economy, accent and skyline. Use the filters to explore by region.</p>
+      </div>
+    </div>
+    <div class="toolbar reveal">
+      <div class="search"><span>⌕</span><input id="citySearch" placeholder="Search cities — try ‘Chicago’ or ‘Austin’…" /></div>
+      <button class="pill active" data-filter="all">All</button>
+      <button class="pill" data-filter="Northeast">Northeast</button>
+      <button class="pill" data-filter="Midwest">Midwest</button>
+      <button class="pill" data-filter="South">South</button>
+      <button class="pill" data-filter="West">West</button>
+    </div>
+    <div class="city-grid" id="cityGrid"></div>
+    <div class="states-box reveal">
+      <h3>All 50 states — <span style="color:var(--muted); font-weight:500">hover for capitals</span></h3>
+      <div class="state-pills" id="statePills"></div>
+    </div>
+  </div>
+</section>
+
+<!-- CULTURE -->
+<section class="block" id="culture">
+  <div class="container">
+    <div class="eyebrow-row reveal">
+      <div>
+        <span class="kicker">05 — Culture & Traditions</span>
+        <h2 class="section-title">Many cultures, one conversation</h2>
+        <p class="section-sub">American culture is a remix — Indigenous roots, immigrant waves, Black creativity, and regional traditions blending into global influence.</p>
+      </div>
+    </div>
+    <div class="culture-grid">
+      <div class="culture-card reveal"><div class="icon">♪</div><h3>Music that moved the world</h3><p>Jazz, blues, rock ’n’ roll, hip-hop, country — all born in the U.S. Nashville, New Orleans, Memphis and NYC remain pilgrimage sites.</p></div>
+      <div class="culture-card reveal"><div class="icon red">◍</div><h3>Food is regional</h3><p>New England clam chowder, Texas brisket, Cajun gumbo, California farm-to-table, Hawaiian poke, NYC bagels and pizza.</p></div>
+      <div class="culture-card reveal"><div class="icon light">◎</div><h3>Sports as ritual</h3><p>NFL Super Bowl (100M+ viewers), MLB Opening Day, NBA Finals, March Madness, plus soccer’s rapid rise and the Olympics.</p></div>
+      <div class="culture-card reveal"><div class="icon light">▣</div><h3>Screen & stage</h3><p>Hollywood, Broadway, streaming giants, and a literary canon from Twain and Whitman to Morrison and Saunders.</p></div>
+    </div>
+    <div class="holiday-strip reveal">
+      <div class="holiday"><strong>🎆 July 4 — Independence Day</strong><span>Fireworks, parades, cookouts nationwide</span></div>
+      <div class="holiday" style="background:var(--red)"><strong>🦃 Thanksgiving — 4th Thu Nov</strong><span>Family feast, Macy’s parade, football</span></div>
+      <div class="holiday"><strong>✦ Memorial Day — last Mon May</strong><span>Honors fallen service members</span></div>
+      <div class="holiday" style="background:#fff; color:var(--navy); border:1px solid var(--line)"><strong style="color:var(--navy)">● MLK Day — 3rd Mon Jan</strong><span style="color:var(--muted)">Service, marches, reflection</span></div>
+    </div>
+    <div class="quote reveal" style="margin-top:18px">
+      <div><p>“America is not a place. It’s an idea — that we are all created equal and deserve to be treated equally throughout our lives.”</p><cite>— Civic ideal echoed from Jefferson to modern inaugural addresses</cite></div>
+      <div style="text-align:center"><div style="font-family:Archivo; font-weight:900; font-size:56px; line-height:1">E★<br>PLURIBUS<br>UNUM</div><div style="font-size:12px; letter-spacing:.14em; font-weight:700; color:#E8C9D1">OUT OF MANY, ONE</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ECONOMY -->
+<section class="block alt" id="economy">
+  <div class="container">
+    <div class="eyebrow-row reveal">
+      <div>
+        <span class="kicker">06 — Economy</span>
+        <h2 class="section-title">The world’s largest economy</h2>
+        <p class="section-sub">Market-driven, innovative and consumer-powered — services make up ~80% of GDP, with technology, finance and energy leading globally.</p>
+      </div>
+    </div>
+    <div class="econ">
+      <div class="card reveal">
+        <span class="tag">GDP by sector (share)</span>
+        <h3 style="font-size:22px">Services dominate, industry powers exports</h3>
+        <div class="bar"><div class="bar-top"><span>Services — finance, tech, healthcare</span><span>80%</span></div><div class="bar-track"><div class="bar-fill" data-w="80%"></div></div></div>
+        <div class="bar"><div class="bar-top"><span>Industry — manufacturing, energy</span><span>19%</span></div><div class="bar-track"><div class="bar-fill red" data-w="19%"></div></div></div>
+        <div class="bar"><div class="bar-top"><span>Agriculture — corn, soy, cattle</span><span>1%</span></div><div class="bar-track"><div class="bar-fill" data-w="6%"></div></div></div>
+        <div class="divider"></div>
+        <p style="font-size:14px; color:var(--muted)">Currency: <b style="color:var(--navy)">U.S. Dollar (USD, $)</b> — world’s primary reserve currency. Federal Reserve sets monetary policy. NYSE & Nasdaq are the two largest stock exchanges on Earth.</p>
+      </div>
+      <div>
+        <div class="card reveal" style="background:var(--navy); color:#fff; border-color:var(--navy)">
+          <span class="kicker" style="color:#9AB4D8">Infographic highlights</span>
+          <div class="kpi-grid">
+            <div class="kpi"><span>Nominal GDP</span><strong>~$29T</strong><p style="margin:4px 0 0; font-size:13px; color:#5B6577">No. 1 globally (2024–25)</p></div>
+            <div class="kpi"><span>Unemployment</span><strong>~4%</strong><p style="margin:4px 0 0; font-size:13px; color:#5B6577">Historically low range</p></div>
+            <div class="kpi"><span>Top export</span><strong>Tech + Energy</strong><p style="margin:4px 0 0; font-size:13px; color:#5B6577">Aircraft, chips, refined oil</p></div>
+            <div class="kpi"><span>Innovation</span><strong>No. 3</strong><p style="margin:4px 0 0; font-size:13px; color:#5B6577">Global Innovation Index</p></div>
+          </div>
+        </div>
+        <div class="card reveal" style="margin-top:14px"><h3>Signature industries</h3><p><b>Silicon Valley & Seattle</b> (software, cloud, AI) · <b>Wall Street</b> (finance) · <b>Houston & Texas</b> (energy) · <b>Detroit & South</b> (autos, EVs) · <b>Midwest</b> (agriculture) · <b>Hollywood</b> (entertainment).</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- LANDMARKS -->
+<section class="block" id="landmarks">
+  <div class="container">
+    <div class="eyebrow-row reveal">
+      <div>
+        <span class="kicker">07 — Landmarks</span>
+        <h2 class="section-title">Places that tell the story</h2>
+        <p class="section-sub">From natural wonders to civic icons — six essential stops for understanding America’s geography and ideals.</p>
+      </div>
+    </div>
+    <div class="land-grid">
+      <article class="land reveal"><div class="land-img" style="background:linear-gradient(180deg, rgba(10,25,49,.15), rgba(10,25,49,.72)), linear-gradient(135deg,#1B3560,#B31942)"><span class="badge">New York Harbor</span><span>★</span><h3>Statue of Liberty</h3></div><div class="land-body"><p>Gift from France (1886). Copper icon of freedom greeting 4M+ visitors a year via ferry from Battery Park.</p><div class="meta"><span>Liberty Island, NY</span><span>93 m</span></div></div></article>
+      <article class="land reveal"><div class="land-img" style="background:linear-gradient(180deg, rgba(10,25,49,.15), rgba(10,25,49,.72)), linear-gradient(135deg,#8E1233,#C9A86A)"><span class="badge">Arizona</span><span>▲</span><h3>Grand Canyon</h3></div><div class="land-body"><p>277 miles of layered red rock carved by the Colorado River over 6 million years. A UNESCO World Heritage site.</p><div class="meta"><span>Grand Canyon NP</span><span>1.8 km deep</span></div></div></article>
+      <article class="land reveal"><div class="land-img" style="background:linear-gradient(180deg, rgba(10,25,49,.15), rgba(10,25,49,.72)), linear-gradient(135deg,#0A1931,#3A6EA5)"><span class="badge">Washington, D.C.</span><span>⬣</span><h3>National Mall</h3></div><div class="land-body"><p>Two miles from Capitol to Lincoln Memorial — monuments, museums (many free Smithsonian) and historic marches.</p><div class="meta"><span>The Mall</span><span>Free entry</span></div></div></article>
+      <article class="land reveal"><div class="land-img" style="background:linear-gradient(180deg, rgba(10,25,49,.15), rgba(10,25,49,.72)), linear-gradient(135deg,#2B4A7A,#5EE0A0)"><span class="badge">California</span><span>≈</span><h3>Yosemite & Golden Gate</h3></div><div class="land-body"><p>Granite cliffs and giant sequoias inland; San Francisco’s 1937 suspension bridge spanning 2.7 km over the strait.</p><div class="meta"><span>California</span><span>2 icons, 1 state</span></div></div></article>
+      <article class="land reveal"><div class="land-img" style="background:linear-gradient(180deg, rgba(10,25,49,.15), rgba(10,25,49,.72)), linear-gradient(135deg,#5B2A3A,#0A1931)"><span class="badge">South Dakota</span><span>◈</span><h3>Mount Rushmore</h3></div><div class="land-body"><p>60-foot faces of Washington, Jefferson, Roosevelt and Lincoln carved 1927–41 into the Black Hills.</p><div class="meta"><span>Keystone, SD</span><span>18 m faces</span></div></div></article>
+      <article class="land reveal"><div class="land-img" style="background:linear-gradient(180deg, rgba(10,25,49,.15), rgba(10,25,49,.72)), linear-gradient(135deg,#132845,#B31942)"><span class="badge">Hawaii & Alaska</span><span>✦</span><h3>Volcanoes & Glaciers</h3></div><div class="land-body"><p>Hawai‘i Volcanoes’ active lava fields contrast Denali and Kenai Fjords — America’s most extreme frontiers.</p><div class="meta"><span>50th & 49th states</span><span>1959 admitted</span></div></div></article>
+    </div>
+  </div>
+</section>
+
+<!-- FACTS -->
+<section class="block alt" id="facts">
+  <div class="container">
+    <div class="eyebrow-row reveal">
+      <div>
+        <span class="kicker">08 — Key Facts</span>
+        <h2 class="section-title">The U.S. in numbers</h2>
+        <p class="section-sub">A quick-reference dossier — perfect for students, travelers and the simply curious.</p>
+      </div>
+      <button class="btn" onclick="window.print()">⎙ Print this guide</button>
+    </div>
+    <div class="facts-grid reveal">
+      <div class="fact-card"><small>Official name</small><strong>United States of America</strong><p>Federal presidential constitutional republic</p></div>
+      <div class="fact-card"><small>Capital</small><strong>Washington, D.C.</strong><p>68.5 sq mi federal district, ~690K residents</p></div>
+      <div class="fact-card"><small>Population</small><strong>~340 million (2024)</strong><p>3rd after India & China; 80%+ urban</p></div>
+      <div class="fact-card"><small>Area</small><strong>9,833,520 km²</strong><p>3rd/4th largest by measure</p></div>
+      <div class="fact-card"><small>Languages</small><strong>English (de facto)</strong><p>Spanish 13%+, 350+ languages spoken</p></div>
+      <div class="fact-card"><small>Currency</small><strong>U.S. Dollar — $ (USD)</strong><p>100 cents = 1 dollar</p></div>
+      <div class="fact-card"><small>Time zones</small><strong>6 primary zones</strong><p>ET · CT · MT · PT · AKT · HST</p></div>
+      <div class="fact-card"><small>Driving / Calling</small><strong>Right side · +1</strong><p>Emergency: 911 · Internet: .us</p></div>
+    </div>
+    <div class="table-wrap reveal">
+      <table>
+        <thead><tr><th>Topic</th><th>Detail</th><th>Note</th></tr></thead>
+        <tbody>
+          <tr><td><b>Founding</b></td><td>Declaration July 4, 1776 · Constitution 1788</td><td>250th anniversary in 2026</td></tr>
+          <tr><td><b>Flag</b></td><td>50 stars (states) · 13 stripes (colonies)</td><td>27th version adopted 1960 (Hawaii)</td></tr>
+          <tr><td><b>Anthem</b></td><td>“The Star-Spangled Banner” (1814 / 1931)</td><td>By Francis Scott Key</td></tr>
+          <tr><td><b>Largest city</b></td><td>New York City — ~8.3M (metro ~20M)</td><td>Followed by LA & Chicago</td></tr>
+          <tr><td><b>Highest / Lowest</b></td><td>Denali 6,190 m · Death Valley −86 m</td><td>Both extremes, one country</td></tr>
+          <tr><td><b>Government</b></td><td>President + Congress + Supreme Court</td><td>Federalism: states retain broad powers</td></tr>
+          <tr><td><b>Economy</b></td><td>~$29T GDP · USD reserve currency</td><td>NYSE + Nasdaq largest exchanges</td></tr>
+          <tr><td><b>National parks</b></td><td>63 parks, 430+ total NPS units</td><td>Yellowstone was first (1872)</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="flag-stripe" aria-hidden="true" style="margin:-56px 0 36px"><span></span><span></span><span></span><span></span><span></span><span></span></div>
+  <div class="foot-grid">
+    <div>
+      <div style="display:flex; gap:10px; align-items:center; margin-bottom:12px"><div class="brand-mark" style="background:#fff; color:var(--navy)">US</div><div><b style="color:#fff; font-family:Archivo">United States Guide</b><br><small style="letter-spacing:.1em; font-size:11px">EDITORIAL · 2026 EDITION</small></div></div>
+      <p style="font-size:14px; max-width:320px">A clean, educational overview designed for readability. Not an official government publication. Sources: Census Bureau, NPS, Federal Reserve, Britannica.</p>
+    </div>
+    <div><h4>Explore</h4><a href="#history">History timeline</a><a href="#geography">Geography & regions</a><a href="#government">Government branches</a><a href="#states">States & cities</a></div>
+    <div><h4>Discover</h4><a href="#culture">Culture & holidays</a><a href="#economy">Economy data</a><a href="#landmarks">Landmarks</a><a href="#facts">Key facts table</a></div>
+    <div><h4>Civic</h4><a href="https://www.usa.gov" target="_blank" rel="noopener">USA.gov — official portal</a><a href="https://www.census.gov" target="_blank" rel="noopener">U.S. Census Bureau</a><a href="https://www.nps.gov" target="_blank" rel="noopener">National Park Service</a><a href="https://www.archives.gov" target="_blank" rel="noopener">National Archives</a></div>
+  </div>
+  <div class="foot-bottom"><span>© <span id="year"></span> The Union — Crafted with deep navy, old-glory red & balanced whitespace.</span><span>E Pluribus Unum · In God We Trust</span></div>
+</footer>
+
+<button id="toTop" aria-label="Back to top">↑</button>
+
+<script>
+const cities = [
+  {name:"New York City", state:"New York", region:"Northeast", pop:"8.3M", note:"Finance, media & culture capital. Statue of Liberty, Broadway, Wall Street.", grad:"linear-gradient(135deg,#0A1931,#B31942)"},
+  {name:"Boston", state:"Massachusetts", region:"Northeast", pop:"653K", note:"Revolutionary history, universities, biotech. Freedom Trail & Fenway.", grad:"linear-gradient(135deg,#1B3560,#3A6EA5)"},
+  {name:"Philadelphia", state:"Pennsylvania", region:"Northeast", pop:"1.6M", note:"Birthplace of independence. Liberty Bell & cheesesteaks.", grad:"linear-gradient(135deg,#8E1233,#0A1931)"},
+  {name:"Chicago", state:"Illinois", region:"Midwest", pop:"2.6M", note:"Architecture, blues & deep-dish. Third-largest metro economy.", grad:"linear-gradient(135deg,#132845,#5B7FA6)"},
+  {name:"Detroit", state:"Michigan", region:"Midwest", pop:"620K", note:"Motor City reborn — autos, Motown sound, riverfront revival.", grad:"linear-gradient(135deg,#2B364B,#B31942)"},
+  {name:"Minneapolis", state:"Minnesota", region:"Midwest", pop:"425K", note:"Lakes, theater & Fortune 500s. Twin Cities with St. Paul.", grad:"linear-gradient(135deg,#0F2547,#5EE0A0)"},
+  {name:"Houston", state:"Texas", region:"South", pop:"2.3M", note:"Energy capital & Space Center Houston. Most diverse large city.", grad:"linear-gradient(135deg,#8E1233,#C9A86A)"},
+  {name:"Atlanta", state:"Georgia", region:"South", pop:"500K", note:"Civil rights history, film hub, world’s busiest airport.", grad:"linear-gradient(135deg,#B31942,#0A1931)"},
+  {name:"Miami", state:"Florida", region:"South", pop:"455K", note:"Gateway to Latin America. Art Deco, beaches & finance.", grad:"linear-gradient(135deg,#1B3560,#E35A7A)"},
+  {name:"Austin", state:"Texas", region:"South", pop:"980K", note:"Live music, tech boom & tacos. ‘Keep Austin Weird’.", grad:"linear-gradient(135deg,#3A2A5A,#B31942)"},
+  {name:"Los Angeles", state:"California", region:"West", pop:"3.8M", note:"Hollywood, Pacific beaches & creative economy. 2nd-largest city.", grad:"linear-gradient(135deg,#C9A86A,#B31942)"},
+  {name:"San Francisco", state:"California", region:"West", pop:"810K", note:"Golden Gate, cable cars & Silicon Valley’s northern gate.", grad:"linear-gradient(135deg,#0A1931,#3A6EA5)"},
+  {name:"Seattle", state:"Washington", region:"West", pop:"750K", note:"Coffee, cloud computing & evergreens. Space Needle & Pike Place.", grad:"linear-gradient(135deg,#1E3A67,#5EE0A0)"},
+  {name:"Denver", state:"Colorado", region:"West", pop:"715K", note:"Mile-High city at the Rockies’ edge. Outdoors + aerospace.", grad:"linear-gradient(135deg,#132845,#8E9BB5)"},
+  {name:"Honolulu", state:"Hawaii", region:"West", pop:"350K", note:"Pacific crossroads. Waikiki, Pearl Harbor & volcanic islands.", grad:"linear-gradient(135deg,#0F766E,#0A1931)"},
+];
+
+const states = [
+  ["Alabama","Montgomery"],["Alaska","Juneau"],["Arizona","Phoenix"],["Arkansas","Little Rock"],["California","Sacramento"],["Colorado","Denver"],["Connecticut","Hartford"],["Delaware","Dover"],["Florida","Tallahassee"],["Georgia","Atlanta"],["Hawaii","Honolulu"],["Idaho","Boise"],["Illinois","Springfield"],["Indiana","Indianapolis"],["Iowa","Des Moines"],["Kansas","Topeka"],["Kentucky","Frankfort"],["Louisiana","Baton Rouge"],["Maine","Augusta"],["Maryland","Annapolis"],["Massachusetts","Boston"],["Michigan","Lansing"],["Minnesota","St. Paul"],["Mississippi","Jackson"],["Missouri","Jefferson City"],["Montana","Helena"],["Nebraska","Lincoln"],["Nevada","Carson City"],["New Hampshire","Concord"],["New Jersey","Trenton"],["New Mexico","Santa Fe"],["New York","Albany"],["North Carolina","Raleigh"],["North Dakota","Bismarck"],["Ohio","Columbus"],["Oklahoma","Oklahoma City"],["Oregon","Salem"],["Pennsylvania","Harrisburg"],["Rhode Island","Providence"],["South Carolina","Columbia"],["South Dakota","Pierre"],["Tennessee","Nashville"],["Texas","Austin"],["Utah","Salt Lake City"],["Vermont","Montpelier"],["Virginia","Richmond"],["Washington","Olympia"],["West Virginia","Charleston"],["Wisconsin","Madison"],["Wyoming","Cheyenne"]
+];
+
+const grid = document.getElementById('cityGrid');
+const search = document.getElementById('citySearch');
+let activeFilter = 'all';
+
+function renderCities(){
+  const q = (search.value||'').toLowerCase();
+  grid.innerHTML = '';
+  cities.filter(c => (activeFilter==='all' || c.region===activeFilter) && (c.name.toLowerCase().includes(q) || c.state.toLowerCase().includes(q)))
+  .forEach(c=>{
+    const el = document.createElement('article');
+    el.className='city reveal visible';
+    el.innerHTML = `<div class="city-visual" style="background:${c.grad}"><small>${c.region.toUpperCase()}</small>${c.name}</div>
+      <div class="city-body"><p>${c.note}</p><div class="city-meta"><span>◉ ${c.state}</span><span>● ${c.pop}</span></div></div>`;
+    grid.appendChild(el);
+  });
+  if(!grid.children.length){
+    grid.innerHTML = `<div class="card" style="grid-column:1/-1; text-align:center; color:var(--muted)">No cities match “${search.value}”. Try “Miami” or clear the search.</div>`;
+  }
+}
+document.querySelectorAll('.pill').forEach(b=>b.addEventListener('click',()=>{
+  document.querySelectorAll('.pill').forEach(x=>x.classList.remove('active'));
+  b.classList.add('active'); activeFilter=b.dataset.filter; renderCities();
+}));
+search.addEventListener('input', renderCities);
+renderCities();
+
+const pills = document.getElementById('statePills');
+states.forEach(([s,cap])=>{
+  const el=document.createElement('span'); el.title=`Capital: ${cap}`; el.innerHTML=`<b>•</b> ${s}`;
+  pills.appendChild(el);
+});
+
+// counters
+function animateCount(el){
+  const target=parseFloat(el.dataset.count); const prefix=el.dataset.prefix||''; const suffix=el.dataset.suffix||'';
+  const dur=1400; const t0=performance.now();
+  function tick(t){ const p=Math.min(1,(t-t0)/dur); const e=1-Math.pow(1-p,3); el.textContent=prefix+Math.round(target*e)+suffix; if(p<1) requestAnimationFrame(tick); }
+  requestAnimationFrame(tick);
+}
+const statObs=new IntersectionObserver(es=>es.forEach(e=>{ if(e.isIntersecting){ animateCount(e.target); statObs.unobserve(e.target);} }),{threshold:.5});
+document.querySelectorAll('[data-count]').forEach(el=>statObs.observe(el));
+
+// reveal
+const revObs=new IntersectionObserver(es=>es.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('visible'); revObs.unobserve(e.target);} }),{threshold:.12});
+document.querySelectorAll('.reveal').forEach(el=>revObs.observe(el));
+
+// bars
+const barObs=new IntersectionObserver(es=>es.forEach(e=>{ if(e.isIntersecting){ e.target.style.width=e.target.dataset.w; barObs.unobserve(e.target);} }),{threshold:.4});
+document.querySelectorAll('.bar-fill').forEach(el=>barObs.observe(el));
+
+// nav
+const menuBtn=document.getElementById('menuBtn'); const navLinks=document.getElementById('navLinks');
+menuBtn.addEventListener('click',()=>navLinks.classList.toggle('open'));
+navLinks.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>navLinks.classList.remove('open')));
+
+// scrollspy + toTop
+const toTop=document.getElementById('toTop');
+const sections=[...document.querySelectorAll('section.block')];
+const navAs=[...document.querySelectorAll('.nav-links a')];
+window.addEventListener('scroll',()=>{
+  toTop.style.display = window.scrollY>700 ? 'block':'none';
+  let cur=''; sections.forEach(s=>{ if(window.scrollY >= s.offsetTop-140) cur=s.id; });
+  navAs.forEach(a=>a.classList.toggle('active', a.getAttribute('href')==='#'+cur));
+},{passive:true});
+toTop.addEventListener('click',()=>window.scrollTo({top:0,behavior:'smooth'}));
+
+document.getElementById('year').textContent=new Date().getFullYear();
+const d=new Date();
+document.getElementById('dateLine').textContent = d.toLocaleDateString('en-US',{weekday:'long', month:'long', day:'numeric', year:'numeric'}) + ' — Washington, D.C.';
+</script>
+</body>
+</html>
