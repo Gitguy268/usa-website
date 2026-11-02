@@ -8,6 +8,10 @@ History, geography, government, states, culture, economy, landmarks and key fact
 
 `website-overview.pptx` is a short slide overview of the site. An independent project, not a government website.
 
+<!-- live-links -->
+**Live:** [gitguy268.github.io/usa-website](https://gitguy268.github.io/usa-website/) · [usa-website-pied.vercel.app](https://usa-website-pied.vercel.app)
+<!-- /live-links -->
+
 <!-- run-steps:start -->
 ## Run it locally, step by step
 
